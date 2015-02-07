@@ -1,0 +1,9 @@
+LightSalmon
+Salmon
+DarkSalmon
+LightCoral
+IndianRed
+Crimson
+FireBrick
+DarkRed
+Red
