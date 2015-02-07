@@ -170,3 +170,11 @@ $.each(colors, function(i, c) {
   var friendly_color = c.replace(/([A-Z])/g, function($1){return " "+$1; });
   $('#colors').append('<div class=color style="background-color: ' + c + '">' + friendly_color + '</div>');
 });
+
+$('#colors div').each(function() {
+  var rgb = $(this).css('background-color').replace(/[^\d,]/g, '').split(',');
+
+  var brightness = rgb[0]*0.299 + rgb[1]*0.587 + rgb[2]*0.114;
+  console.log(brightness);
+  if (brightness <= 160) $(this).addClass('light');
+});
